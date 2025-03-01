@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.iconButton7 = new FontAwesome.Sharp.IconButton();
+            this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ibtnEtudiant = new FontAwesome.Sharp.IconButton();
@@ -40,10 +44,6 @@
             this.txtUsername = new FontAwesome.Sharp.IconButton();
             this.btnLogout = new FontAwesome.Sharp.IconButton();
             this.pnDestop = new System.Windows.Forms.Panel();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +68,106 @@
             this.panelMenu.Size = new System.Drawing.Size(300, 953);
             this.panelMenu.TabIndex = 0;
             // 
+            // iconButton7
+            // 
+            this.iconButton7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton7.FlatAppearance.BorderSize = 0;
+            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton7.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.ChartColumn;
+            this.iconButton7.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton7.IconSize = 40;
+            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton7.Location = new System.Drawing.Point(0, 466);
+            this.iconButton7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.iconButton7.Name = "iconButton7";
+            this.iconButton7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton7.Size = new System.Drawing.Size(300, 52);
+            this.iconButton7.TabIndex = 14;
+            this.iconButton7.Text = "Rapport";
+            this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton7.UseVisualStyleBackColor = true;
+            this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
+            // 
+            // iconButton6
+            // 
+            this.iconButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton6.FlatAppearance.BorderSize = 0;
+            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton6.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.CcDinersClub;
+            this.iconButton6.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton6.IconSize = 40;
+            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton6.Location = new System.Drawing.Point(0, 414);
+            this.iconButton6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.iconButton6.Name = "iconButton6";
+            this.iconButton6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton6.Size = new System.Drawing.Size(300, 52);
+            this.iconButton6.TabIndex = 13;
+            this.iconButton6.Text = "Gestion Notes";
+            this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton6.UseVisualStyleBackColor = true;
+            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
+            // 
+            // iconButton5
+            // 
+            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton5.FlatAppearance.BorderSize = 0;
+            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton5.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
+            this.iconButton5.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.IconSize = 40;
+            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton5.Location = new System.Drawing.Point(0, 362);
+            this.iconButton5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton5.Size = new System.Drawing.Size(300, 52);
+            this.iconButton5.TabIndex = 12;
+            this.iconButton5.Text = "Gestion Cours";
+            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton5.UseVisualStyleBackColor = true;
+            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
+            // 
+            // iconButton4
+            // 
+            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton4.FlatAppearance.BorderSize = 0;
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.UserGraduate;
+            this.iconButton4.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.IconSize = 40;
+            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton4.Location = new System.Drawing.Point(0, 310);
+            this.iconButton4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton4.Size = new System.Drawing.Size(300, 52);
+            this.iconButton4.TabIndex = 11;
+            this.iconButton4.Text = "Gestion Matieres";
+            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton4.UseVisualStyleBackColor = true;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
+            // 
             // iconButton3
             // 
             this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -91,6 +191,7 @@
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // panel3
             // 
@@ -289,102 +390,6 @@
             this.pnDestop.Name = "pnDestop";
             this.pnDestop.Size = new System.Drawing.Size(1182, 873);
             this.pnDestop.TabIndex = 2;
-            // 
-            // iconButton4
-            // 
-            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.UserGraduate;
-            this.iconButton4.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 40;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(0, 310);
-            this.iconButton4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton4.Size = new System.Drawing.Size(300, 52);
-            this.iconButton4.TabIndex = 11;
-            this.iconButton4.Text = "Gestion Matieres";
-            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = true;
-            // 
-            // iconButton5
-            // 
-            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
-            this.iconButton5.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 40;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(0, 362);
-            this.iconButton5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton5.Size = new System.Drawing.Size(300, 52);
-            this.iconButton5.TabIndex = 12;
-            this.iconButton5.Text = "Gestion Cours";
-            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = true;
-            // 
-            // iconButton6
-            // 
-            this.iconButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton6.FlatAppearance.BorderSize = 0;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.CcDinersClub;
-            this.iconButton6.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 40;
-            this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.Location = new System.Drawing.Point(0, 414);
-            this.iconButton6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton6.Size = new System.Drawing.Size(300, 52);
-            this.iconButton6.TabIndex = 13;
-            this.iconButton6.Text = "Gestion Notes";
-            this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton6.UseVisualStyleBackColor = true;
-            // 
-            // iconButton7
-            // 
-            this.iconButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton7.FlatAppearance.BorderSize = 0;
-            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton7.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.ChartColumn;
-            this.iconButton7.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.IconSize = 40;
-            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.Location = new System.Drawing.Point(0, 466);
-            this.iconButton7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton7.Size = new System.Drawing.Size(300, 52);
-            this.iconButton7.TabIndex = 14;
-            this.iconButton7.Text = "Rapport";
-            this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton7.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

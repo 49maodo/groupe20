@@ -145,5 +145,30 @@ namespace gestion_etudiant
         {
 
         }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormProfesseur(), sender);
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormMatiere(), sender);
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormCour(), sender);
+        }
+
+        private void iconButton6_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormNote(), sender);
+        }
+
+        private void iconButton7_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormRapport(), sender);
+        }
     }
 }
