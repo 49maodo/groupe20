@@ -236,14 +236,23 @@
     <EmbeddedResource Include="Forms\FormClasse.resx">
       <DependentUpon>FormClasse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCour.resx">
+      <DependentUpon>FormCour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormEtudiant.resx">
       <DependentUpon>FormEtudiant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMatiere.resx">
+      <DependentUpon>FormMatiere.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormNote.resx">
       <DependentUpon>FormNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormProfesseur.resx">
+      <DependentUpon>FormProfesseur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>
