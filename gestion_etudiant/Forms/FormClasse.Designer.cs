@@ -28,21 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.BtnDelete = new System.Windows.Forms.Button();
+            this.BtnUpdate = new System.Windows.Forms.Button();
+            this.BtnClear = new System.Windows.Forms.Button();
+            this.BtnAdd = new System.Windows.Forms.Button();
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.dataClasse = new System.Windows.Forms.DataGridView();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataClasse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -51,113 +54,125 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(235, 450);
+            this.groupBox1.Size = new System.Drawing.Size(239, 450);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestion Classe";
             // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(235, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(565, 74);
-            this.panel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(235, 74);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(565, 376);
-            this.panel2.TabIndex = 2;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(565, 376);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.BtnDelete);
+            this.panel3.Controls.Add(this.BtnUpdate);
+            this.panel3.Controls.Add(this.BtnClear);
+            this.panel3.Controls.Add(this.BtnAdd);
+            this.panel3.Controls.Add(this.txtNom);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(3, 18);
             this.panel3.Margin = new System.Windows.Forms.Padding(10);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(10);
-            this.panel3.Size = new System.Drawing.Size(229, 212);
+            this.panel3.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.panel3.Size = new System.Drawing.Size(233, 212);
             this.panel3.TabIndex = 0;
+            // 
+            // BtnDelete
+            // 
+            this.BtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnDelete.Location = new System.Drawing.Point(120, 144);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(94, 38);
+            this.BtnDelete.TabIndex = 7;
+            this.BtnDelete.Text = "Supprimer";
+            this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            // 
+            // BtnUpdate
+            // 
+            this.BtnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnUpdate.Location = new System.Drawing.Point(15, 144);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(94, 38);
+            this.BtnUpdate.TabIndex = 6;
+            this.BtnUpdate.Text = "Modifier";
+            this.BtnUpdate.UseVisualStyleBackColor = true;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
+            // 
+            // BtnClear
+            // 
+            this.BtnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnClear.Location = new System.Drawing.Point(120, 87);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Size = new System.Drawing.Size(93, 38);
+            this.BtnClear.TabIndex = 3;
+            this.BtnClear.Text = "Effacer";
+            this.BtnClear.UseVisualStyleBackColor = true;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
+            // BtnAdd
+            // 
+            this.BtnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAdd.Location = new System.Drawing.Point(16, 87);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(94, 38);
+            this.BtnAdd.TabIndex = 2;
+            this.BtnAdd.Text = "Ajouter";
+            this.BtnAdd.UseVisualStyleBackColor = true;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            // 
+            // txtNom
+            // 
+            this.txtNom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtNom.Location = new System.Drawing.Point(20, 26);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtNom.Size = new System.Drawing.Size(193, 22);
+            this.txtNom.TabIndex = 1;
+            this.txtNom.Validating += new System.ComponentModel.CancelEventHandler(this.txtNom_Validating);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Location = new System.Drawing.Point(20, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nom Classe";
             // 
-            // textBox1
+            // panel1
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Location = new System.Drawing.Point(10, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 22);
-            this.textBox1.TabIndex = 1;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(239, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(561, 74);
+            this.panel1.TabIndex = 1;
             // 
-            // button1
+            // panel2
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(10, 87);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 38);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.panel2.Controls.Add(this.dataClasse);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(239, 74);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(561, 376);
+            this.panel2.TabIndex = 2;
             // 
-            // button2
+            // dataClasse
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(124, 87);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 38);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.dataClasse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataClasse.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataClasse.Location = new System.Drawing.Point(0, 0);
+            this.dataClasse.Name = "dataClasse";
+            this.dataClasse.ReadOnly = true;
+            this.dataClasse.RowHeadersWidth = 51;
+            this.dataClasse.RowTemplate.Height = 24;
+            this.dataClasse.Size = new System.Drawing.Size(561, 376);
+            this.dataClasse.TabIndex = 0;
+            this.dataClasse.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataClasse_CellMouseDoubleClick);
             // 
-            // button3
+            // errorProvider
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(124, 141);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(92, 38);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(10, 141);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 38);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.errorProvider.ContainerControl = this;
             // 
             // FormClasse
             // 
@@ -170,11 +185,13 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FormClasse";
             this.Text = "FormClasse";
+            this.Load += new System.EventHandler(this.FormClasse_Load);
             this.groupBox1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataClasse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -183,14 +200,15 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button BtnAdd;
+        private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataClasse;
+        private System.Windows.Forms.Button BtnClear;
+        private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Button BtnDelete;
+        private System.Windows.Forms.Button BtnUpdate;
     }
 }
