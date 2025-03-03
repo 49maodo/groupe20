@@ -32,4 +32,13 @@ namespace gestion_etudiant
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Professeurs> Professeurs { get; set; }
     }
+    public class ClasseDetails
+    {
+        public int Id { get; set; }
+        public string NomClasse { get; set; }
+        public int NbEtudiants { get; set; }
+        public int NbCours { get; set; }
+        public int NbProfesseurs { get; set; }
+    }
+
 }
