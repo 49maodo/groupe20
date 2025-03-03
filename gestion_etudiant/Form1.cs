@@ -25,21 +25,21 @@ namespace gestion_etudiant
         public Form1()
         {
             InitializeComponent();
-            if (string.IsNullOrEmpty(UserSession.Username))
-            {
-                this.Hide();
-                FormLogin formLogin = new FormLogin();
-                formLogin.ShowDialog();
-                if (string.IsNullOrEmpty(UserSession.Username))
-                {
-                    this.Close();
-                }
-                else
-                {
-                    this.Show();
-                    txtUsername.Text = UserSession.Username;
-                }
-            }
+            //if (string.IsNullOrEmpty(UserSession.Username))
+            //{
+            //    this.Hide();
+            //    FormLogin formLogin = new FormLogin();
+            //    formLogin.ShowDialog();
+            //    if (string.IsNullOrEmpty(UserSession.Username))
+            //    {
+            //        this.Close();
+            //    }
+            //    else
+            //    {
+            //        this.Show();
+            //        txtUsername.Text = UserSession.Username;
+            //    }
+            //}
         }
 
         private void OpenChildForm(Form childform, object btnSender)
