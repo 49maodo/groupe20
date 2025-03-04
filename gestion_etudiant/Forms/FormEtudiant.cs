@@ -16,7 +16,7 @@ namespace gestion_etudiant.Forms
         public FormEtudiant()
         {
             InitializeComponent();
-            loadEtudiant();
+            //loadEtudiant();
         }
 
         private void FormEtudiant_Load_1(object sender, EventArgs e)
@@ -282,8 +282,10 @@ namespace gestion_etudiant.Forms
                     e.Nom,
                     e.Prenom,
                     e.Sexe,
+                    e.Adresse,
                     e.DateNaissance,
                     e.Telephone,
+                    e.Email,
                     Classe = e.Classes.NomClasse,
                     Moyenne = e.Notes.Average(n => n.Note)
                 }).ToList();

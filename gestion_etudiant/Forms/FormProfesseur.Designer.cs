@@ -29,22 +29,24 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbClasse = new System.Windows.Forms.ComboBox();
+            this.btnAssocierCours = new System.Windows.Forms.Button();
+            this.cmbMat = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.ModifProf = new System.Windows.Forms.Button();
+            this.AddProf = new System.Windows.Forms.Button();
+            this.textTel = new System.Windows.Forms.TextBox();
+            this.textEmail = new System.Windows.Forms.TextBox();
+            this.textPrenom = new System.Windows.Forms.TextBox();
+            this.textNom = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.SuppProf = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -53,159 +55,173 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbClasse);
+            this.groupBox1.Controls.Add(this.btnAssocierCours);
+            this.groupBox1.Controls.Add(this.cmbMat);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(314, 531);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(236, 431);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestion Professeur";
             // 
+            // cmbClasse
+            // 
+            this.cmbClasse.FormattingEnabled = true;
+            this.cmbClasse.Location = new System.Drawing.Point(12, 398);
+            this.cmbClasse.Name = "cmbClasse";
+            this.cmbClasse.Size = new System.Drawing.Size(121, 21);
+            this.cmbClasse.TabIndex = 16;
+            // 
+            // btnAssocierCours
+            // 
+            this.btnAssocierCours.Location = new System.Drawing.Point(153, 355);
+            this.btnAssocierCours.Name = "btnAssocierCours";
+            this.btnAssocierCours.Size = new System.Drawing.Size(75, 23);
+            this.btnAssocierCours.TabIndex = 15;
+            this.btnAssocierCours.Text = "Associer";
+            this.btnAssocierCours.UseVisualStyleBackColor = true;
+            this.btnAssocierCours.Click += new System.EventHandler(this.btnAssocierCours_Click);
+            // 
+            // cmbMat
+            // 
+            this.cmbMat.FormattingEnabled = true;
+            this.cmbMat.Location = new System.Drawing.Point(12, 358);
+            this.cmbMat.Name = "cmbMat";
+            this.cmbMat.Size = new System.Drawing.Size(121, 21);
+            this.cmbMat.TabIndex = 14;
+            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.SuppProf);
+            this.panel1.Controls.Add(this.ModifProf);
+            this.panel1.Controls.Add(this.AddProf);
+            this.panel1.Controls.Add(this.textTel);
+            this.panel1.Controls.Add(this.textEmail);
+            this.panel1.Controls.Add(this.textPrenom);
+            this.panel1.Controls.Add(this.textNom);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 18);
+            this.panel1.Location = new System.Drawing.Point(2, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(308, 397);
+            this.panel1.Padding = new System.Windows.Forms.Padding(8);
+            this.panel1.Size = new System.Drawing.Size(232, 323);
             this.panel1.TabIndex = 0;
             // 
-            // textBox1
+            // ModifProf
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Location = new System.Drawing.Point(10, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(288, 22);
-            this.textBox1.TabIndex = 1;
+            this.ModifProf.Location = new System.Drawing.Point(118, 211);
+            this.ModifProf.Name = "ModifProf";
+            this.ModifProf.Size = new System.Drawing.Size(75, 23);
+            this.ModifProf.TabIndex = 20;
+            this.ModifProf.Text = "Modifier";
+            this.ModifProf.UseVisualStyleBackColor = true;
+            this.ModifProf.Click += new System.EventHandler(this.ModifProf_Click);
             // 
-            // label1
+            // AddProf
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Location = new System.Drawing.Point(10, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nom";
+            this.AddProf.Location = new System.Drawing.Point(18, 211);
+            this.AddProf.Name = "AddProf";
+            this.AddProf.Size = new System.Drawing.Size(75, 23);
+            this.AddProf.TabIndex = 19;
+            this.AddProf.Text = "Ajouter";
+            this.AddProf.UseVisualStyleBackColor = true;
+            this.AddProf.Click += new System.EventHandler(this.addProf_Click);
             // 
-            // textBox2
+            // textTel
             // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox2.Location = new System.Drawing.Point(10, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(288, 22);
-            this.textBox2.TabIndex = 3;
+            this.textTel.Location = new System.Drawing.Point(80, 163);
+            this.textTel.Multiline = true;
+            this.textTel.Name = "textTel";
+            this.textTel.Size = new System.Drawing.Size(115, 20);
+            this.textTel.TabIndex = 18;
+            this.textTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textTel_KeyPress);
             // 
-            // label2
+            // textEmail
             // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Location = new System.Drawing.Point(10, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Prenom";
+            this.textEmail.Location = new System.Drawing.Point(80, 127);
+            this.textEmail.Multiline = true;
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(115, 20);
+            this.textEmail.TabIndex = 17;
             // 
-            // textBox3
+            // textPrenom
             // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox3.Location = new System.Drawing.Point(10, 102);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(288, 22);
-            this.textBox3.TabIndex = 5;
+            this.textPrenom.Location = new System.Drawing.Point(80, 88);
+            this.textPrenom.Multiline = true;
+            this.textPrenom.Name = "textPrenom";
+            this.textPrenom.Size = new System.Drawing.Size(115, 20);
+            this.textPrenom.TabIndex = 16;
             // 
-            // label3
+            // textNom
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Location = new System.Drawing.Point(10, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Email";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox4.Location = new System.Drawing.Point(10, 140);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(288, 22);
-            this.textBox4.TabIndex = 7;
+            this.textNom.Location = new System.Drawing.Point(80, 59);
+            this.textNom.Multiline = true;
+            this.textNom.Name = "textNom";
+            this.textNom.Size = new System.Drawing.Size(115, 20);
+            this.textNom.TabIndex = 15;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Location = new System.Drawing.Point(10, 124);
+            this.label4.Location = new System.Drawing.Point(15, 171);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 16);
-            this.label4.TabIndex = 6;
+            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.TabIndex = 14;
             this.label4.Text = "Telephone";
             // 
-            // button1
+            // label3
             // 
-            this.button1.Location = new System.Drawing.Point(13, 211);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 37);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 134);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Email";
             // 
-            // button2
+            // label2
             // 
-            this.button2.Location = new System.Drawing.Point(172, 211);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 37);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Prenom";
             // 
-            // button3
+            // label1
             // 
-            this.button3.Location = new System.Drawing.Point(172, 268);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 37);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(13, 268);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(112, 37);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Nom";
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(314, 0);
+            this.panel2.Location = new System.Drawing.Point(236, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(866, 66);
+            this.panel2.Size = new System.Drawing.Size(649, 54);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(314, 66);
+            this.panel3.Location = new System.Drawing.Point(236, 54);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(866, 465);
+            this.panel3.Size = new System.Drawing.Size(649, 377);
             this.panel3.TabIndex = 2;
             // 
             // dataGridView1
@@ -213,20 +229,33 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(866, 465);
+            this.dataGridView1.Size = new System.Drawing.Size(649, 377);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // SuppProf
+            // 
+            this.SuppProf.Location = new System.Drawing.Point(18, 257);
+            this.SuppProf.Name = "SuppProf";
+            this.SuppProf.Size = new System.Drawing.Size(75, 23);
+            this.SuppProf.TabIndex = 21;
+            this.SuppProf.Text = "Supprimer";
+            this.SuppProf.UseVisualStyleBackColor = true;
+            this.SuppProf.Click += new System.EventHandler(this.SuppProf_Click);
             // 
             // FormProfesseur
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 531);
+            this.ClientSize = new System.Drawing.Size(885, 431);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormProfesseur";
             this.Text = "FormProfesseur";
             this.groupBox1.ResumeLayout(false);
@@ -242,20 +271,22 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cmbClasse;
+        private System.Windows.Forms.Button btnAssocierCours;
+        private System.Windows.Forms.ComboBox cmbMat;
+        private System.Windows.Forms.Button ModifProf;
+        private System.Windows.Forms.Button AddProf;
+        private System.Windows.Forms.TextBox textTel;
+        private System.Windows.Forms.TextBox textEmail;
+        private System.Windows.Forms.TextBox textPrenom;
+        private System.Windows.Forms.TextBox textNom;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button SuppProf;
     }
 }
