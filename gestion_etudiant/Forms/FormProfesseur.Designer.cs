@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbClasse = new System.Windows.Forms.ComboBox();
+            this.btnAssocierCours = new System.Windows.Forms.Button();
+            this.cmbMat = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.addProf = new System.Windows.Forms.Button();
+            this.ModifProf = new System.Windows.Forms.Button();
+            this.AddProf = new System.Windows.Forms.Button();
             this.textTel = new System.Windows.Forms.TextBox();
             this.textEmail = new System.Windows.Forms.TextBox();
             this.textPrenom = new System.Windows.Forms.TextBox();
@@ -43,9 +43,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbClasse = new System.Windows.Forms.ComboBox();
-            this.btnAssocierCours = new System.Windows.Forms.Button();
-            this.cmbMat = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.SuppProf = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -60,18 +61,45 @@
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(236, 431);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestion Professeur";
             // 
+            // cmbClasse
+            // 
+            this.cmbClasse.FormattingEnabled = true;
+            this.cmbClasse.Location = new System.Drawing.Point(12, 398);
+            this.cmbClasse.Name = "cmbClasse";
+            this.cmbClasse.Size = new System.Drawing.Size(121, 21);
+            this.cmbClasse.TabIndex = 16;
+            // 
+            // btnAssocierCours
+            // 
+            this.btnAssocierCours.Location = new System.Drawing.Point(153, 355);
+            this.btnAssocierCours.Name = "btnAssocierCours";
+            this.btnAssocierCours.Size = new System.Drawing.Size(75, 23);
+            this.btnAssocierCours.TabIndex = 15;
+            this.btnAssocierCours.Text = "Associer";
+            this.btnAssocierCours.UseVisualStyleBackColor = true;
+            this.btnAssocierCours.Click += new System.EventHandler(this.btnAssocierCours_Click);
+            // 
+            // cmbMat
+            // 
+            this.cmbMat.FormattingEnabled = true;
+            this.cmbMat.Location = new System.Drawing.Point(12, 358);
+            this.cmbMat.Name = "cmbMat";
+            this.cmbMat.Size = new System.Drawing.Size(121, 21);
+            this.cmbMat.TabIndex = 14;
+            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.addProf);
+            this.panel1.Controls.Add(this.SuppProf);
+            this.panel1.Controls.Add(this.ModifProf);
+            this.panel1.Controls.Add(this.AddProf);
             this.panel1.Controls.Add(this.textTel);
             this.panel1.Controls.Add(this.textEmail);
             this.panel1.Controls.Add(this.textPrenom);
@@ -82,61 +110,31 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(2, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.panel1.Padding = new System.Windows.Forms.Padding(8);
             this.panel1.Size = new System.Drawing.Size(232, 323);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // ModifProf
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(236, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(649, 54);
-            this.panel2.TabIndex = 1;
+            this.ModifProf.Location = new System.Drawing.Point(118, 211);
+            this.ModifProf.Name = "ModifProf";
+            this.ModifProf.Size = new System.Drawing.Size(75, 23);
+            this.ModifProf.TabIndex = 20;
+            this.ModifProf.Text = "Modifier";
+            this.ModifProf.UseVisualStyleBackColor = true;
+            this.ModifProf.Click += new System.EventHandler(this.ModifProf_Click);
             // 
-            // panel3
+            // AddProf
             // 
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(236, 54);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(649, 377);
-            this.panel3.TabIndex = 2;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(649, 377);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(118, 211);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // addProf
-            // 
-            this.addProf.Location = new System.Drawing.Point(18, 211);
-            this.addProf.Name = "addProf";
-            this.addProf.Size = new System.Drawing.Size(75, 23);
-            this.addProf.TabIndex = 19;
-            this.addProf.Text = "Ajouter";
-            this.addProf.UseVisualStyleBackColor = true;
-            this.addProf.Click += new System.EventHandler(this.addProf_Click);
+            this.AddProf.Location = new System.Drawing.Point(18, 211);
+            this.AddProf.Name = "AddProf";
+            this.AddProf.Size = new System.Drawing.Size(75, 23);
+            this.AddProf.TabIndex = 19;
+            this.AddProf.Text = "Ajouter";
+            this.AddProf.UseVisualStyleBackColor = true;
+            this.AddProf.Click += new System.EventHandler(this.addProf_Click);
             // 
             // textTel
             // 
@@ -207,31 +205,47 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Nom";
             // 
-            // cmbClasse
+            // panel2
             // 
-            this.cmbClasse.FormattingEnabled = true;
-            this.cmbClasse.Location = new System.Drawing.Point(12, 398);
-            this.cmbClasse.Name = "cmbClasse";
-            this.cmbClasse.Size = new System.Drawing.Size(121, 21);
-            this.cmbClasse.TabIndex = 16;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(236, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(649, 54);
+            this.panel2.TabIndex = 1;
             // 
-            // btnAssocierCours
+            // panel3
             // 
-            this.btnAssocierCours.Location = new System.Drawing.Point(153, 355);
-            this.btnAssocierCours.Name = "btnAssocierCours";
-            this.btnAssocierCours.Size = new System.Drawing.Size(75, 23);
-            this.btnAssocierCours.TabIndex = 15;
-            this.btnAssocierCours.Text = "Associer";
-            this.btnAssocierCours.UseVisualStyleBackColor = true;
-            this.btnAssocierCours.Click += new System.EventHandler(this.btnAssocierCours_Click);
+            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(236, 54);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(649, 377);
+            this.panel3.TabIndex = 2;
             // 
-            // cmbMat
+            // dataGridView1
             // 
-            this.cmbMat.FormattingEnabled = true;
-            this.cmbMat.Location = new System.Drawing.Point(12, 358);
-            this.cmbMat.Name = "cmbMat";
-            this.cmbMat.Size = new System.Drawing.Size(121, 21);
-            this.cmbMat.TabIndex = 14;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(649, 377);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // SuppProf
+            // 
+            this.SuppProf.Location = new System.Drawing.Point(18, 257);
+            this.SuppProf.Name = "SuppProf";
+            this.SuppProf.Size = new System.Drawing.Size(75, 23);
+            this.SuppProf.TabIndex = 21;
+            this.SuppProf.Text = "Supprimer";
+            this.SuppProf.UseVisualStyleBackColor = true;
+            this.SuppProf.Click += new System.EventHandler(this.SuppProf_Click);
             // 
             // FormProfesseur
             // 
@@ -241,7 +255,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormProfesseur";
             this.Text = "FormProfesseur";
             this.groupBox1.ResumeLayout(false);
@@ -263,8 +277,8 @@
         private System.Windows.Forms.ComboBox cmbClasse;
         private System.Windows.Forms.Button btnAssocierCours;
         private System.Windows.Forms.ComboBox cmbMat;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button addProf;
+        private System.Windows.Forms.Button ModifProf;
+        private System.Windows.Forms.Button AddProf;
         private System.Windows.Forms.TextBox textTel;
         private System.Windows.Forms.TextBox textEmail;
         private System.Windows.Forms.TextBox textPrenom;
@@ -273,5 +287,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button SuppProf;
     }
 }

@@ -16,12 +16,19 @@ namespace gestion_etudiant.Forms
         {
             InitializeComponent();
             loadMatieres();
+            chargerMatCmb();
         }
 
         private void FormMatiere_Load(object sender, EventArgs e)
         {
             loadCours();
 
+            
+        }
+
+       
+        public void chargerMatCmb()
+        {
             var db = new exameenEntities();
 
             var matieres = db.Matieres.ToList();
@@ -74,6 +81,7 @@ namespace gestion_etudiant.Forms
             MessageBox.Show("Matière ajoutée avec succès");
             loadMatieres();
             loadCours();
+            chargerMatCmb();
         }
 
         private void btnAssocier_Click(object sender, EventArgs e)
@@ -91,5 +99,98 @@ namespace gestion_etudiant.Forms
             loadMatieres();
             loadCours();
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                textNom.Text = row.Cells["NomMatiere"].Value.ToString();
+
+                //on recupere le cours associé
+                string coursAssocies = row.Cells["CoursAssocies"].Value.ToString();
+                string[] cours = coursAssocies.Split(',');
+                foreach (var item in cours)
+                {
+                    cmbCours.Text = item;
+                }
+                cmbCours.Text = coursAssocies;
+                cmbMat.Enabled = false;
+
+                btnAssocier.Enabled = false;
+
+                DeleteMat.Enabled = true;
+                ModifMat.Enabled = true;
+                addMatiere.Enabled = false;
+            }
+        }
+       
+        private void ModifMat_Click(object sender, EventArgs e)
+        {
+            using(var db = new exameenEntities())
+            {
+                int id = (int)dataGridView1.CurrentRow.Cells["Id"].Value;
+                Matieres matiere = db.Matieres.FirstOrDefault(m => m.Id == id);
+                matiere.NomMatiere = textNom.Text;
+                db.SaveChanges();
+            }
+            MessageBox.Show("Matière modifiée avec succès");
+            loadMatieres();
+            chargerMatCmb();
+            textNom.Text = "";
+            DeleteMat.Enabled = false;
+            ModifMat.Enabled = false;
+            addMatiere.Enabled = true;
+        }
+
+        private void textNom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void DeleteMat_Click(object sender, EventArgs e)
+        {
+            using(var db = new exameenEntities())
+            {
+                int id = (int)dataGridView1.CurrentRow.Cells["Id"].Value;
+                Matieres matiere = db.Matieres
+                    .Include("Cours")
+                    .FirstOrDefault(m => m.Id == id);
+                if (matiere != null)
+                {
+                    matiere.Cours.Clear();
+                    db.SaveChanges();
+                }
+                db.Matieres.Remove(matiere);
+                db.SaveChanges();
+
+            }
+            MessageBox.Show("Matière supprimée avec succès");
+            loadMatieres();
+            chargerMatCmb();
+        }
+
+        private void ModifAssoce_Click(object sender, EventArgs e)
+        {
+            using(var db = new exameenEntities())
+            {
+                int idMatiere = (int)cmbMat.SelectedValue;
+                int idCours = (int)cmbCours.SelectedValue;
+                Matieres matiere = db.Matieres.FirstOrDefault(m => m.Id == idMatiere);
+                Cours cours = db.Cours.FirstOrDefault(c => c.Id == idCours);
+                matiere.Cours.Add(cours);
+                db.SaveChanges();
+            }
+            MessageBox.Show("Association modifiée avec succès");
+            loadMatieres();
+            loadCours();
+            cmbMat.Enabled = true;
+            btnAssocier.Enabled = true;
+        }
+
+        
     }
 }

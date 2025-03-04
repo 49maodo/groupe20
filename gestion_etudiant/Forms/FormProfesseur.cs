@@ -74,6 +74,11 @@ namespace gestion_etudiant.Forms
                     MessageBox.Show("Adresse email invalide.");
                     return;
                 }
+                if (textTel.Text.Length != 9)
+                {
+                    MessageBox.Show("Le numéro de téléphone doit contenir 9 chiffres.");
+                    return;
+                }
 
                 Professeurs prof = new Professeurs();
                 prof.Nom = textNom.Text;
@@ -140,5 +145,105 @@ namespace gestion_etudiant.Forms
                 MessageBox.Show("Veuillez sélectionner un professeur, une matière et une classe.");
             }
         }
+
+        private void ModifProf_Click(object sender, EventArgs e)
+        {
+            
+            if (textNom.Text == "" || textPrenom.Text == "" || textEmail.Text == "" || textTel.Text == "")
+            {
+                MessageBox.Show("Veuillez remplir tous les champs");
+                return;
+            }
+            if (!Regex.IsMatch(textEmail.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                MessageBox.Show("Adresse email invalide.");
+                return;
+            }
+            
+            if (textTel.Text.Length != 9)
+            {
+                MessageBox.Show("Le numéro de téléphone doit contenir 9 chiffres.");
+                return;
+            }
+            using (var db = new exameenEntities())
+            {
+                int id = (int)dataGridView1.CurrentRow.Cells["Id"].Value;
+                Professeurs prof = db.Professeurs.FirstOrDefault(p => p.Id == id);
+                prof.Nom = textNom.Text;
+                prof.Prenom = textPrenom.Text;
+                prof.Email = textEmail.Text;
+                prof.Telephone = textTel.Text;
+                db.SaveChanges();
+            }
+            MessageBox.Show("Professeur modifié avec succès");
+            loadProfs();
+            AddProf.Enabled = true;
+            ModifProf.Enabled = false;
+            SuppProf.Enabled = false;
+            
+            textNom.Text = "";
+            textPrenom.Text = "";
+            textEmail.Text = "";
+            textTel.Text = "";
+
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex >= 0)
+            {
+                int id = (int)dataGridView1.CurrentRow.Cells["Id"].Value;
+                using (var db = new exameenEntities())
+                {
+                    Professeurs prof = db.Professeurs.Find(id);
+                    textNom.Text = prof.Nom;
+                    textPrenom.Text = prof.Prenom;
+                    textEmail.Text = prof.Email;
+                    textTel.Text = prof.Telephone;
+                    AddProf.Enabled = false;
+                    ModifProf.Enabled = true;
+                    SuppProf.Enabled = true;
+                }
+            }
+        }
+
+        private void SuppProf_Click(object sender, EventArgs e)
+        {
+            using (var db = new exameenEntities())
+            {
+                int id = (int)dataGridView1.CurrentRow.Cells["Id"].Value;
+                var prof = db.Professeurs
+                             .Include("Matieres")
+                             .Include("Classes")
+                             .FirstOrDefault(p => p.Id == id);
+
+                if (prof != null)
+                {
+                   
+                    prof.Matieres.Clear();
+                    prof.Classes.Clear();
+                    db.SaveChanges(); 
+
+                   
+                    db.Professeurs.Remove(prof);
+                    db.SaveChanges();
+                }
+            }
+
+            MessageBox.Show("Professeur supprimé avec succès");
+            loadProfs();
+            AddProf.Enabled = true;
+            ModifProf.Enabled = false;
+            SuppProf.Enabled = false;
+
+            textNom.Text = "";
+            textPrenom.Text = "";
+            textEmail.Text = "";
+            textTel.Text = "";
+        }
+
+     
+
+
     }
 }
