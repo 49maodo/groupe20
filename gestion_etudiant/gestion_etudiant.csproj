@@ -229,6 +229,7 @@
     <Compile Include="Utilisateurs.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Utils\ReleveNotesDTO.cs" />
     <Compile Include="Utils\Validations.cs" />
     <Compile Include="Utils\ViewModel.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -254,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormProfesseur.resx">
       <DependentUpon>FormProfesseur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormRapport.resx">
+      <DependentUpon>FormRapport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>
