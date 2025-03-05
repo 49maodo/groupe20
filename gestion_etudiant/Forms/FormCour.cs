@@ -157,5 +157,10 @@ namespace gestion_etudiant.Forms
                 }
             }
         }
+
+        private void dataCour_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

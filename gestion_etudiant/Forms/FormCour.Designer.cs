@@ -173,6 +173,7 @@
             this.dataCour.RowTemplate.Height = 24;
             this.dataCour.Size = new System.Drawing.Size(903, 378);
             this.dataCour.TabIndex = 2;
+            this.dataCour.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCour_CellContentClick);
             this.dataCour.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataCour_CellMouseDoubleClick);
             // 
             // errorProvider

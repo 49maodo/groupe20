@@ -166,7 +166,6 @@ namespace gestion_etudiant.Forms
                 }
                 db.Matieres.Remove(matiere);
                 db.SaveChanges();
-
             }
             MessageBox.Show("Matière supprimée avec succès");
             loadMatieres();
