@@ -33,6 +33,7 @@
             this.btnAssocierCours = new System.Windows.Forms.Button();
             this.cmbMat = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.SuppProf = new System.Windows.Forms.Button();
             this.ModifProf = new System.Windows.Forms.Button();
             this.AddProf = new System.Windows.Forms.Button();
             this.textTel = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.SuppProf = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -116,6 +116,16 @@
             this.panel1.Size = new System.Drawing.Size(232, 323);
             this.panel1.TabIndex = 0;
             // 
+            // SuppProf
+            // 
+            this.SuppProf.Location = new System.Drawing.Point(18, 257);
+            this.SuppProf.Name = "SuppProf";
+            this.SuppProf.Size = new System.Drawing.Size(75, 23);
+            this.SuppProf.TabIndex = 21;
+            this.SuppProf.Text = "Supprimer";
+            this.SuppProf.UseVisualStyleBackColor = true;
+            this.SuppProf.Click += new System.EventHandler(this.SuppProf_Click);
+            // 
             // ModifProf
             // 
             this.ModifProf.Location = new System.Drawing.Point(118, 211);
@@ -160,6 +170,7 @@
             this.textPrenom.Name = "textPrenom";
             this.textPrenom.Size = new System.Drawing.Size(115, 20);
             this.textPrenom.TabIndex = 16;
+            this.textPrenom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textPrenom_KeyPress);
             // 
             // textNom
             // 
@@ -168,6 +179,7 @@
             this.textNom.Name = "textNom";
             this.textNom.Size = new System.Drawing.Size(115, 20);
             this.textNom.TabIndex = 15;
+            this.textNom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNom_KeyPress);
             // 
             // label4
             // 
@@ -236,16 +248,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(649, 377);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // SuppProf
-            // 
-            this.SuppProf.Location = new System.Drawing.Point(18, 257);
-            this.SuppProf.Name = "SuppProf";
-            this.SuppProf.Size = new System.Drawing.Size(75, 23);
-            this.SuppProf.TabIndex = 21;
-            this.SuppProf.Text = "Supprimer";
-            this.SuppProf.UseVisualStyleBackColor = true;
-            this.SuppProf.Click += new System.EventHandler(this.SuppProf_Click);
             // 
             // FormProfesseur
             // 
