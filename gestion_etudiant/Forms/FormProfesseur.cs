@@ -242,8 +242,20 @@ namespace gestion_etudiant.Forms
             textTel.Text = "";
         }
 
-     
+        private void textNom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
 
-
+        private void textPrenom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

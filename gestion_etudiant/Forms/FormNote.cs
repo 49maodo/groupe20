@@ -140,5 +140,19 @@ namespace gestion_etudiant.Forms
 
             }
         }
+
+        private void textNote_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void textNote_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }
