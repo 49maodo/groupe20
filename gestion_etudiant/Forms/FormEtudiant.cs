@@ -145,6 +145,7 @@ namespace gestion_etudiant.Forms
                     etudiant.Prenom = textPrenom.Text;
                     etudiant.DateNaissance = dateNais.Value;
                     etudiant.Telephone = textTel.Text;
+                    etudiant.Adresse = textAdresse.Text;
                     etudiant.IdClasse = (int)cmbClasse.SelectedValue;
                     etudiant.Sexe = radioButton1.Checked ? "M" : "F";
                     etudiant.Matricule = GenerateMatricule(etudiant.Nom, etudiant.Id);
@@ -243,8 +244,6 @@ namespace gestion_etudiant.Forms
             }
         }
 
-      
-
         private void cmbFiltreClasse_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -291,10 +290,44 @@ namespace gestion_etudiant.Forms
                 }).ToList();
             }
         }
+        private void AfficherMeilleursEtudiantsParClasse()
+        {
+            using (var db = new exameenEntities())
+            {
+                var meilleursEtudiants = db.Etudiants
+                    .Where(e => e.Notes.Any())
+                    .GroupBy(e => e.IdClasse)
+                    .Select(g => g.OrderByDescending(e => e.Notes.Average(n => n.Note))
+                                  .FirstOrDefault())
+                    .ToList();
+
+                dataGridView1.DataSource = meilleursEtudiants.Select(e => new
+                {
+                    e.Id,
+                    e.Matricule,
+                    e.Nom,
+                    e.Prenom,
+                    e.Sexe,
+                    e.Adresse,
+                    e.DateNaissance,
+                    e.Telephone,
+                    e.Email,
+                    Classe = e.Classes.NomClasse,
+                    Moyenne = e.Notes.Average(n => n.Note)
+                }).ToList();
+            }
+        }
 
         private void cmbTri_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TrierEtudiants();
+            if (cmbTri.SelectedItem.ToString() == "Meilleurs etudiants")
+            {
+                AfficherMeilleursEtudiantsParClasse();
+            }
+            else
+            {
+                TrierEtudiants();
+            }
         }
 
         private void RechercherEtudiants()
