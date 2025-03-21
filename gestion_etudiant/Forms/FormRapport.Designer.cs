@@ -51,6 +51,8 @@
             this.btnTopEtu = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbTop = new System.Windows.Forms.ComboBox();
+            this.btnExportPDF = new System.Windows.Forms.Button();
+            this.btnExportExcel = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -70,7 +72,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(600, 366);
@@ -81,9 +83,9 @@
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.flowLayoutPanel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(592, 340);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Relevés de notes d’un étudiant";
@@ -95,7 +97,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(2, 80);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -115,7 +117,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btnRapport);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 2);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(588, 78);
             this.flowLayoutPanel1.TabIndex = 0;
@@ -124,7 +126,7 @@
             // 
             this.txtId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtId.Location = new System.Drawing.Point(8, 9);
-            this.txtId.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txtId.Margin = new System.Windows.Forms.Padding(8);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(61, 20);
             this.txtId.TabIndex = 7;
@@ -136,7 +138,7 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Location = new System.Drawing.Point(85, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(8);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(2);
             this.label1.Size = new System.Drawing.Size(33, 17);
@@ -146,7 +148,7 @@
             // txtRecherche
             // 
             this.txtRecherche.Location = new System.Drawing.Point(134, 8);
-            this.txtRecherche.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txtRecherche.Margin = new System.Windows.Forms.Padding(8);
             this.txtRecherche.Name = "txtRecherche";
             this.txtRecherche.Size = new System.Drawing.Size(133, 20);
             this.txtRecherche.TabIndex = 1;
@@ -157,7 +159,7 @@
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Location = new System.Drawing.Point(283, 8);
-            this.label2.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.label2.Margin = new System.Windows.Forms.Padding(8);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(2);
             this.label2.Size = new System.Drawing.Size(42, 17);
@@ -169,7 +171,7 @@
             this.cmbFiltreClasse.Dock = System.Windows.Forms.DockStyle.Top;
             this.cmbFiltreClasse.FormattingEnabled = true;
             this.cmbFiltreClasse.Location = new System.Drawing.Point(341, 8);
-            this.cmbFiltreClasse.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.cmbFiltreClasse.Margin = new System.Windows.Forms.Padding(8);
             this.cmbFiltreClasse.Name = "cmbFiltreClasse";
             this.cmbFiltreClasse.Size = new System.Drawing.Size(133, 21);
             this.cmbFiltreClasse.TabIndex = 3;
@@ -179,7 +181,7 @@
             // 
             this.txtMat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMat.Location = new System.Drawing.Point(8, 47);
-            this.txtMat.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.txtMat.Margin = new System.Windows.Forms.Padding(8);
             this.txtMat.Name = "txtMat";
             this.txtMat.ReadOnly = true;
             this.txtMat.Size = new System.Drawing.Size(125, 20);
@@ -189,7 +191,7 @@
             // 
             this.btnRapport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRapport.Location = new System.Drawing.Point(149, 45);
-            this.btnRapport.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnRapport.Margin = new System.Windows.Forms.Padding(8);
             this.btnRapport.Name = "btnRapport";
             this.btnRapport.Size = new System.Drawing.Size(145, 22);
             this.btnRapport.TabIndex = 4;
@@ -202,9 +204,9 @@
             this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(592, 340);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Liste des étudiants par classe";
@@ -216,7 +218,7 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(2, 61);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
@@ -230,7 +232,7 @@
             this.panel1.Controls.Add(this.cmbClasse);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(588, 59);
             this.panel1.TabIndex = 0;
@@ -238,7 +240,7 @@
             // btnRapportClass
             // 
             this.btnRapportClass.Location = new System.Drawing.Point(429, 19);
-            this.btnRapportClass.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnRapportClass.Margin = new System.Windows.Forms.Padding(8);
             this.btnRapportClass.Name = "btnRapportClass";
             this.btnRapportClass.Size = new System.Drawing.Size(130, 22);
             this.btnRapportClass.TabIndex = 6;
@@ -250,7 +252,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(9, 20);
-            this.label3.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.label3.Margin = new System.Windows.Forms.Padding(8);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(2);
             this.label3.Size = new System.Drawing.Size(42, 17);
@@ -261,7 +263,7 @@
             // 
             this.cmbClasse.FormattingEnabled = true;
             this.cmbClasse.Location = new System.Drawing.Point(67, 19);
-            this.cmbClasse.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.cmbClasse.Margin = new System.Windows.Forms.Padding(8);
             this.cmbClasse.Name = "cmbClasse";
             this.cmbClasse.Size = new System.Drawing.Size(158, 21);
             this.cmbClasse.TabIndex = 5;
@@ -272,9 +274,9 @@
             this.tabPage3.Controls.Add(this.dataGridView3);
             this.tabPage3.Controls.Add(this.panel2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage3.Size = new System.Drawing.Size(592, 340);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Liste des meilleurs étudiants par classe";
@@ -286,7 +288,7 @@
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.Location = new System.Drawing.Point(2, 61);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
@@ -295,12 +297,14 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnExportExcel);
+            this.panel2.Controls.Add(this.btnExportPDF);
             this.panel2.Controls.Add(this.btnTopEtu);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.cmbTop);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(2, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(588, 59);
             this.panel2.TabIndex = 1;
@@ -308,7 +312,7 @@
             // btnTopEtu
             // 
             this.btnTopEtu.Location = new System.Drawing.Point(436, 19);
-            this.btnTopEtu.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnTopEtu.Margin = new System.Windows.Forms.Padding(8);
             this.btnTopEtu.Name = "btnTopEtu";
             this.btnTopEtu.Size = new System.Drawing.Size(130, 22);
             this.btnTopEtu.TabIndex = 6;
@@ -319,7 +323,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(9, 20);
-            this.label4.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.label4.Margin = new System.Windows.Forms.Padding(8);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(2);
             this.label4.Size = new System.Drawing.Size(42, 17);
@@ -332,11 +336,31 @@
             this.cmbTop.Items.AddRange(new object[] {
             "Meilleurs etudiants"});
             this.cmbTop.Location = new System.Drawing.Point(67, 19);
-            this.cmbTop.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.cmbTop.Margin = new System.Windows.Forms.Padding(8);
             this.cmbTop.Name = "cmbTop";
             this.cmbTop.Size = new System.Drawing.Size(146, 21);
             this.cmbTop.TabIndex = 5;
             this.cmbTop.SelectedIndexChanged += new System.EventHandler(this.cmbTop_SelectedIndexChanged);
+            // 
+            // btnExportPDF
+            // 
+            this.btnExportPDF.Location = new System.Drawing.Point(238, 19);
+            this.btnExportPDF.Name = "btnExportPDF";
+            this.btnExportPDF.Size = new System.Drawing.Size(75, 23);
+            this.btnExportPDF.TabIndex = 7;
+            this.btnExportPDF.Text = "Pdf";
+            this.btnExportPDF.UseVisualStyleBackColor = true;
+            this.btnExportPDF.Click += new System.EventHandler(this.btnExportPDF_Click);
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.Location = new System.Drawing.Point(336, 20);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(75, 23);
+            this.btnExportExcel.TabIndex = 8;
+            this.btnExportExcel.Text = "Excel";
+            this.btnExportExcel.UseVisualStyleBackColor = true;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // FormRapport
             // 
@@ -344,7 +368,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormRapport";
             this.Text = "FormRapport";
             this.Load += new System.EventHandler(this.FormRapport_Load);
@@ -390,5 +414,7 @@
         private System.Windows.Forms.Button btnTopEtu;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtMat;
+        private System.Windows.Forms.Button btnExportExcel;
+        private System.Windows.Forms.Button btnExportPDF;
     }
 }
