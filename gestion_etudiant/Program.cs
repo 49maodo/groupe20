@@ -20,7 +20,7 @@ namespace gestion_etudiant
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new Form1());
             }
-            catch (Exception ex) {
+            catch (Exception) {
                 Application.Exit();
             }
         }

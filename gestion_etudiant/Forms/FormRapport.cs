@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClosedXML.Excel;
 using gestion_etudiant.Rapport;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 
 namespace gestion_etudiant.Forms
 {
@@ -125,7 +129,7 @@ namespace gestion_etudiant.Forms
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            // Récupérer l'ID de l'étudiant sélectionné
+           
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
@@ -211,6 +215,79 @@ namespace gestion_etudiant.Forms
             {
                 AfficherMeilleursEtudiantsParClasse();
             }
+        }
+        private void ExportToPDF()
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "PDF Files (*.pdf)|*.pdf";
+            sfd.FileName = "Meilleurs_Etudiants.pdf";
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                Document doc = new Document();
+                PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
+                doc.Open();
+
+                PdfPTable table = new PdfPTable(dataGridView3.Columns.Count);
+                foreach (DataGridViewColumn column in dataGridView3.Columns)
+                {
+                    table.AddCell(new Phrase(column.HeaderText));
+                }
+
+                foreach (DataGridViewRow row in dataGridView3.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        table.AddCell(cell.Value?.ToString() ?? "");
+                    }
+                }
+
+                doc.Add(table);
+                doc.Close();
+
+                MessageBox.Show("Exportation PDF réussie !");
+            }
+        }
+
+        private void ExportToExcel()
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel Files (*.xlsx)|*.xlsx";
+            sfd.FileName = "Meilleurs_Etudiants.xlsx";
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                using (var workbook = new XLWorkbook())
+                {
+                    var worksheet = workbook.Worksheets.Add("Meilleurs Etudiants");
+
+                    for (int i = 0; i < dataGridView3.Columns.Count; i++)
+                    {
+                        worksheet.Cell(1, i + 1).Value = dataGridView3.Columns[i].HeaderText;
+                    }
+
+                    for (int i = 0; i < dataGridView3.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dataGridView3.Columns.Count; j++)
+                        {
+                            worksheet.Cell(i + 2, j + 1).Value = dataGridView3.Rows[i].Cells[j].Value?.ToString() ?? "";
+                        }
+                    }
+
+                    workbook.SaveAs(sfd.FileName);
+                    MessageBox.Show("Exportation Excel réussie !");
+                }
+            }
+        }
+
+        private void btnExportPDF_Click(object sender, EventArgs e)
+        {
+            ExportToPDF();
+        }
+
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            ExportToExcel();
         }
     }
 }
