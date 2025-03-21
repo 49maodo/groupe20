@@ -22,7 +22,13 @@ namespace gestion_etudiant.Forms
         private void refresh()
         {
             dataCour.DataSource = null;
-            dataCour.DataSource = db.Cours.ToList();
+            dataCour.DataSource = db.Cours.Select(c => new
+            {
+                c.Id,
+                c.NomCours,
+                c.Description
+            })
+                .ToList(); ;
             formClear();
         }
         private void activeBtn()

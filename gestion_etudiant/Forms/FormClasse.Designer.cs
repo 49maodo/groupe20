@@ -53,8 +53,10 @@
             this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(239, 450);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(179, 366);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestion Classe";
@@ -68,19 +70,20 @@
             this.panel3.Controls.Add(this.txtNom);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(3, 18);
-            this.panel3.Margin = new System.Windows.Forms.Padding(10);
+            this.panel3.Location = new System.Drawing.Point(2, 15);
+            this.panel3.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel3.Size = new System.Drawing.Size(233, 212);
+            this.panel3.Padding = new System.Windows.Forms.Padding(15, 8, 15, 8);
+            this.panel3.Size = new System.Drawing.Size(175, 172);
             this.panel3.TabIndex = 0;
             // 
             // BtnDelete
             // 
             this.BtnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnDelete.Location = new System.Drawing.Point(120, 144);
+            this.BtnDelete.Location = new System.Drawing.Point(90, 117);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(94, 38);
+            this.BtnDelete.Size = new System.Drawing.Size(70, 31);
             this.BtnDelete.TabIndex = 7;
             this.BtnDelete.Text = "Supprimer";
             this.BtnDelete.UseVisualStyleBackColor = true;
@@ -89,9 +92,10 @@
             // BtnUpdate
             // 
             this.BtnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnUpdate.Location = new System.Drawing.Point(15, 144);
+            this.BtnUpdate.Location = new System.Drawing.Point(11, 117);
+            this.BtnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Size = new System.Drawing.Size(94, 38);
+            this.BtnUpdate.Size = new System.Drawing.Size(70, 31);
             this.BtnUpdate.TabIndex = 6;
             this.BtnUpdate.Text = "Modifier";
             this.BtnUpdate.UseVisualStyleBackColor = true;
@@ -100,9 +104,10 @@
             // BtnClear
             // 
             this.BtnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnClear.Location = new System.Drawing.Point(120, 87);
+            this.BtnClear.Location = new System.Drawing.Point(90, 71);
+            this.BtnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnClear.Name = "BtnClear";
-            this.BtnClear.Size = new System.Drawing.Size(93, 38);
+            this.BtnClear.Size = new System.Drawing.Size(70, 31);
             this.BtnClear.TabIndex = 3;
             this.BtnClear.Text = "Effacer";
             this.BtnClear.UseVisualStyleBackColor = true;
@@ -111,9 +116,10 @@
             // BtnAdd
             // 
             this.BtnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnAdd.Location = new System.Drawing.Point(16, 87);
+            this.BtnAdd.Location = new System.Drawing.Point(12, 71);
+            this.BtnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(94, 38);
+            this.BtnAdd.Size = new System.Drawing.Size(70, 31);
             this.BtnAdd.TabIndex = 2;
             this.BtnAdd.Text = "Ajouter";
             this.BtnAdd.UseVisualStyleBackColor = true;
@@ -122,10 +128,11 @@
             // txtNom
             // 
             this.txtNom.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtNom.Location = new System.Drawing.Point(20, 26);
+            this.txtNom.Location = new System.Drawing.Point(15, 21);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNom.Name = "txtNom";
             this.txtNom.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtNom.Size = new System.Drawing.Size(193, 22);
+            this.txtNom.Size = new System.Drawing.Size(145, 20);
             this.txtNom.TabIndex = 1;
             this.txtNom.Validating += new System.ComponentModel.CancelEventHandler(this.txtNom_Validating);
             // 
@@ -133,40 +140,44 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Location = new System.Drawing.Point(20, 10);
+            this.label1.Location = new System.Drawing.Point(15, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 16);
+            this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nom Classe";
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(239, 0);
+            this.panel1.Location = new System.Drawing.Point(179, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(561, 74);
+            this.panel1.Size = new System.Drawing.Size(421, 60);
             this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dataClasse);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(239, 74);
+            this.panel2.Location = new System.Drawing.Point(179, 60);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(561, 376);
+            this.panel2.Size = new System.Drawing.Size(421, 306);
             this.panel2.TabIndex = 2;
             // 
             // dataClasse
             // 
+            this.dataClasse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataClasse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataClasse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataClasse.Location = new System.Drawing.Point(0, 0);
+            this.dataClasse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataClasse.Name = "dataClasse";
             this.dataClasse.ReadOnly = true;
             this.dataClasse.RowHeadersWidth = 51;
             this.dataClasse.RowTemplate.Height = 24;
-            this.dataClasse.Size = new System.Drawing.Size(561, 376);
+            this.dataClasse.Size = new System.Drawing.Size(421, 306);
             this.dataClasse.TabIndex = 0;
             this.dataClasse.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataClasse_CellMouseDoubleClick);
             // 
@@ -176,13 +187,14 @@
             // 
             // FormClasse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormClasse";
             this.Text = "FormClasse";
             this.Load += new System.EventHandler(this.FormClasse_Load);

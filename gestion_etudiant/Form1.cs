@@ -25,22 +25,57 @@ namespace gestion_etudiant
         public Form1()
         {
             InitializeComponent();
-            //if (string.IsNullOrEmpty(UserSession.Username))
-            //{
-            //    this.Hide();
-            //    FormLogin formLogin = new FormLogin();
-            //    formLogin.ShowDialog();
-            //    if (string.IsNullOrEmpty(UserSession.Username))
-            //    {
-            //        this.Close();
-            //    }
-            //    else
-            //    {
-            //        this.Show();
-            //        txtUsername.Text = UserSession.Username;
-            //    }
-            //}
+            if (string.IsNullOrEmpty(UserSession.Username))
+            {
+                this.Hide();
+                FormLogin formLogin = new FormLogin();
+                formLogin.ShowDialog();
+                if (string.IsNullOrEmpty(UserSession.Username))
+                {
+                    this.Close();
+                }
+                else
+                {
+                    this.Show();
+                    txtUsername.Text = UserSession.Username;
+                    RestrictAccess();
+                }
+            }
         }
+        private void RestrictAccess()
+        {
+            string role = UserSession.Role;
+
+            switch (role)
+            {
+                case "Administrateur":
+                    
+                    break;
+
+                case "DE":
+                    
+                    ibtnUser.Visible = false;
+                    break;
+
+                case "Agent":
+                   
+                    ibtnUser.Visible = false;
+                    ibtnClasse.Visible = false;
+                    iconButton3.Visible = false;
+                    iconButton4.Visible = false;
+                    iconButton5.Visible = false;
+                    iconButton7.Visible = false; 
+                    break;
+
+                default:
+                    
+                    panelMenu.Enabled = false;
+                    btnLogout.Enabled = true;
+                    MessageBox.Show("Accès refusé : rôle non reconnu", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+            }
+        }
+
 
         private void OpenChildForm(Form childform, object btnSender)
         {
@@ -92,7 +127,7 @@ namespace gestion_etudiant
             get
             {
                 CreateParams cp = base.CreateParams;
-                cp.ClassStyle |= 0x200; // Désactive le bouton de fermeture (X)
+                cp.ClassStyle |= 0x200; 
                 return cp;
             }
         }

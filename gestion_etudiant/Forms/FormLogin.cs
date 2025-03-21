@@ -27,6 +27,7 @@ namespace gestion_etudiant.Forms
                 MessageBox.Show("Veuillez remplir tous les champs.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             var context = new exameenEntities();
             var utilisateur = context.Utilisateurs.FirstOrDefault(u => u.NomUtilisateur == username);
 
@@ -36,8 +37,8 @@ namespace gestion_etudiant.Forms
                 return;
             }
 
-
-            if (utilisateur.MotDePasse != password)
+            
+            if (!BCrypt.Net.BCrypt.Verify(password, utilisateur.MotDePasse))
             {
                 MessageBox.Show("Mot de passe incorrect.");
                 return;
@@ -47,8 +48,19 @@ namespace gestion_etudiant.Forms
             UserSession.Role = utilisateur.Role;
             UserSession.Id = utilisateur.Id;
 
-            MessageBox.Show("Connexion reussie");
+            MessageBox.Show("Connexion réussie");
             this.Close();
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
+           
+        }
+
+        private void voirPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !voirPassword.Checked;
         }
     }
 }
