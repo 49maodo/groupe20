@@ -53,8 +53,10 @@
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(279, 444);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(209, 361);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gestion Cour";
@@ -70,17 +72,19 @@
             this.panel1.Controls.Add(this.txtNom);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 18);
+            this.panel1.Location = new System.Drawing.Point(2, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.panel1.Size = new System.Drawing.Size(273, 293);
+            this.panel1.Padding = new System.Windows.Forms.Padding(15, 8, 15, 8);
+            this.panel1.Size = new System.Drawing.Size(205, 238);
             this.panel1.TabIndex = 0;
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(148, 168);
+            this.BtnDelete.Location = new System.Drawing.Point(111, 136);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(115, 35);
+            this.BtnDelete.Size = new System.Drawing.Size(86, 28);
             this.BtnDelete.TabIndex = 7;
             this.BtnDelete.Text = "Supprimer";
             this.BtnDelete.UseVisualStyleBackColor = true;
@@ -88,9 +92,10 @@
             // 
             // BtnUpdate
             // 
-            this.BtnUpdate.Location = new System.Drawing.Point(10, 168);
+            this.BtnUpdate.Location = new System.Drawing.Point(8, 136);
+            this.BtnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Size = new System.Drawing.Size(116, 35);
+            this.BtnUpdate.Size = new System.Drawing.Size(87, 28);
             this.BtnUpdate.TabIndex = 6;
             this.BtnUpdate.Text = "Modifier";
             this.BtnUpdate.UseVisualStyleBackColor = true;
@@ -98,9 +103,10 @@
             // 
             // BtnClear
             // 
-            this.BtnClear.Location = new System.Drawing.Point(148, 113);
+            this.BtnClear.Location = new System.Drawing.Point(111, 92);
+            this.BtnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnClear.Name = "BtnClear";
-            this.BtnClear.Size = new System.Drawing.Size(115, 35);
+            this.BtnClear.Size = new System.Drawing.Size(86, 28);
             this.BtnClear.TabIndex = 5;
             this.BtnClear.Text = "Effacer";
             this.BtnClear.UseVisualStyleBackColor = true;
@@ -108,9 +114,10 @@
             // 
             // BtnAdd
             // 
-            this.BtnAdd.Location = new System.Drawing.Point(10, 113);
+            this.BtnAdd.Location = new System.Drawing.Point(8, 92);
+            this.BtnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(116, 35);
+            this.BtnAdd.Size = new System.Drawing.Size(87, 28);
             this.BtnAdd.TabIndex = 4;
             this.BtnAdd.Text = "Ajouter";
             this.BtnAdd.UseVisualStyleBackColor = true;
@@ -119,9 +126,10 @@
             // txtDesc
             // 
             this.txtDesc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtDesc.Location = new System.Drawing.Point(20, 64);
+            this.txtDesc.Location = new System.Drawing.Point(15, 54);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(233, 22);
+            this.txtDesc.Size = new System.Drawing.Size(175, 20);
             this.txtDesc.TabIndex = 3;
             this.txtDesc.Validating += new System.ComponentModel.CancelEventHandler(this.txtDesc_Validating);
             // 
@@ -129,18 +137,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Location = new System.Drawing.Point(20, 48);
+            this.label2.Location = new System.Drawing.Point(15, 41);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 16);
+            this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Description";
             // 
             // txtNom
             // 
             this.txtNom.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtNom.Location = new System.Drawing.Point(20, 26);
+            this.txtNom.Location = new System.Drawing.Point(15, 21);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(233, 22);
+            this.txtNom.Size = new System.Drawing.Size(175, 20);
             this.txtNom.TabIndex = 1;
             this.txtNom.Validating += new System.ComponentModel.CancelEventHandler(this.txtNom_Validating);
             // 
@@ -148,30 +158,34 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Location = new System.Drawing.Point(20, 10);
+            this.label1.Location = new System.Drawing.Point(15, 8);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 16);
+            this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nom Cour";
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(279, 0);
+            this.panel2.Location = new System.Drawing.Point(209, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(903, 66);
+            this.panel2.Size = new System.Drawing.Size(677, 54);
             this.panel2.TabIndex = 1;
             // 
             // dataCour
             // 
+            this.dataCour.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataCour.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataCour.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataCour.Location = new System.Drawing.Point(279, 66);
+            this.dataCour.Location = new System.Drawing.Point(209, 54);
+            this.dataCour.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataCour.Name = "dataCour";
             this.dataCour.ReadOnly = true;
             this.dataCour.RowHeadersWidth = 51;
             this.dataCour.RowTemplate.Height = 24;
-            this.dataCour.Size = new System.Drawing.Size(903, 378);
+            this.dataCour.Size = new System.Drawing.Size(677, 307);
             this.dataCour.TabIndex = 2;
             this.dataCour.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCour_CellContentClick);
             this.dataCour.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataCour_CellMouseDoubleClick);
@@ -182,12 +196,13 @@
             // 
             // FormCour
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 444);
+            this.ClientSize = new System.Drawing.Size(886, 361);
             this.Controls.Add(this.dataCour);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormCour";
             this.Load += new System.EventHandler(this.FormCour_Load);
             this.groupBox1.ResumeLayout(false);

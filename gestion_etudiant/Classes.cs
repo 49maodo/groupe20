@@ -37,7 +37,6 @@ namespace gestion_etudiant
         public int Id { get; set; }
         public string NomClasse { get; set; }
         public int NbEtudiants { get; set; }
-        public int NbCours { get; set; }
         public int NbProfesseurs { get; set; }
     }
 

@@ -33,9 +33,8 @@ namespace gestion_etudiant.Forms
             {
                 Id = cl.Id,
                 NomClasse = cl.NomClasse,
-                NbEtudiants = cl.Etudiants.Count,  // Nombre d'étudiants
-                NbCours = cl.Cours.Count,          // Nombre de cours
-                NbProfesseurs = cl.Professeurs.Count // Nombre de professeurs
+                NbEtudiants = cl.Etudiants.Count,
+                NbProfesseurs = cl.Professeurs.Count
             }).ToList();
             formClear();
         }

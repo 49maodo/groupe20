@@ -178,5 +178,39 @@ namespace gestion_etudiant.Forms
             formPrint.ReleveEtudiantParClasse(idClasse);
             formPrint.ShowDialog();
         }
+        private void AfficherMeilleursEtudiantsParClasse()
+        {
+            using (var db = new exameenEntities())
+            {
+                var meilleursEtudiants = db.Etudiants
+                    .Where(e => e.Notes.Any())
+                    .GroupBy(e => e.IdClasse)
+                    .Select(g => g.OrderByDescending(e => e.Notes.Average(n => n.Note))
+                                  .FirstOrDefault())
+                    .ToList();
+
+                dataGridView3.DataSource = meilleursEtudiants.Select(e => new
+                {
+                    e.Id,
+                    e.Matricule,
+                    e.Nom,
+                    e.Prenom,
+                    e.Sexe,
+                    e.Adresse,
+                    e.DateNaissance,
+                    e.Telephone,
+                    e.Email,
+                    Classe = e.Classes.NomClasse,
+                    Moyenne = e.Notes.Average(n => n.Note)
+                }).ToList();
+            }
+        }
+        private void cmbTop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTop.SelectedItem.ToString() == "Meilleurs etudiants")
+            {
+                AfficherMeilleursEtudiantsParClasse();
+            }
+        }
     }
 }
