@@ -15,6 +15,7 @@ using LiveChartsCore.SkiaSharpView.SKCharts;
 using LiveChartsCore.SkiaSharpView.Painting;
 using SkiaSharp;
 using gestion_etudiant.Forms;
+using ClosedXML.Parser;
 
 namespace gestion_etudiant
 {
@@ -22,9 +23,11 @@ namespace gestion_etudiant
     {
         private Form activeForm;
         private FontAwesome.Sharp.IconButton currentButton;
+        private  exameenEntities _context = new exameenEntities();
         public Form1()
         {
             InitializeComponent();
+           
             if (string.IsNullOrEmpty(UserSession.Username))
             {
                 this.Hide();
@@ -40,7 +43,28 @@ namespace gestion_etudiant
                     txtUsername.Text = UserSession.Username;
                     RestrictAccess();
                 }
+                
             }
+        }
+
+        private void ChargerStatistiques()
+        {
+            lblEtudiants.Text = _context.Etudiants.Count().ToString();
+            lblCours.Text = _context.Cours.Count().ToString();
+            lblClasses.Text = _context.Classes.Count().ToString();
+            lblProfesseurs.Text = _context.Professeurs.Count().ToString();
+        }
+
+        private void AfficherDiagramme()
+        {
+            chartStatistiques.Series.Clear();
+            var serie = chartStatistiques.Series.Add("Statistiques");
+            serie.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+
+            serie.Points.AddXY("Étudiants", _context.Etudiants.Count());
+            serie.Points.AddXY("Cours", _context.Cours.Count());
+            serie.Points.AddXY("Classes", _context.Classes.Count());
+            serie.Points.AddXY("Professeurs", _context.Professeurs.Count());
         }
         private void RestrictAccess()
         {
@@ -134,7 +158,8 @@ namespace gestion_etudiant
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            AfficherDiagramme();
+            ChargerStatistiques();
         }
 
         private void ibtnUser_Click(object sender, EventArgs e)
@@ -205,5 +230,9 @@ namespace gestion_etudiant
         {
             OpenChildForm(new Forms.FormRapport(), sender);
         }
+
+       
+       
+
     }
 }
