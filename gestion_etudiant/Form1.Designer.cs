@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
@@ -44,8 +47,28 @@
             this.txtUsername = new FontAwesome.Sharp.IconButton();
             this.btnLogout = new FontAwesome.Sharp.IconButton();
             this.pnDestop = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblProfesseurs = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblClasses = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblCours = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblEtudiants = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.chartStatistiques = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.pnDestop.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartStatistiques)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -65,7 +88,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(300, 953);
+            this.panelMenu.Size = new System.Drawing.Size(300, 881);
             this.panelMenu.TabIndex = 0;
             // 
             // iconButton7
@@ -74,7 +97,7 @@
             this.iconButton7.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton7.FlatAppearance.BorderSize = 0;
             this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton7.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.ChartColumn;
             this.iconButton7.IconColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -99,7 +122,7 @@
             this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton6.FlatAppearance.BorderSize = 0;
             this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton6.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.CcDinersClub;
             this.iconButton6.IconColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -124,7 +147,7 @@
             this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton5.FlatAppearance.BorderSize = 0;
             this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
             this.iconButton5.IconColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -149,7 +172,7 @@
             this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton4.FlatAppearance.BorderSize = 0;
             this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.UserGraduate;
             this.iconButton4.IconColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -174,7 +197,7 @@
             this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton3.FlatAppearance.BorderSize = 0;
             this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.UserTie;
             this.iconButton3.IconColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -197,7 +220,7 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BackColor = System.Drawing.Color.OrangeRed;
-            this.panel3.Location = new System.Drawing.Point(300, 571);
+            this.panel3.Location = new System.Drawing.Point(300, 499);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(460, 219);
             this.panel3.TabIndex = 3;
@@ -208,7 +231,7 @@
             this.ibtnEtudiant.Dock = System.Windows.Forms.DockStyle.Top;
             this.ibtnEtudiant.FlatAppearance.BorderSize = 0;
             this.ibtnEtudiant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnEtudiant.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnEtudiant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibtnEtudiant.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ibtnEtudiant.IconChar = FontAwesome.Sharp.IconChar.UserGraduate;
             this.ibtnEtudiant.IconColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -233,7 +256,7 @@
             this.ibtnClasse.Dock = System.Windows.Forms.DockStyle.Top;
             this.ibtnClasse.FlatAppearance.BorderSize = 0;
             this.ibtnClasse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnClasse.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnClasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibtnClasse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ibtnClasse.IconChar = FontAwesome.Sharp.IconChar.SchoolCircleCheck;
             this.ibtnClasse.IconColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -258,7 +281,7 @@
             this.ibtnUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.ibtnUser.FlatAppearance.BorderSize = 0;
             this.ibtnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnUser.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibtnUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ibtnUser.IconChar = FontAwesome.Sharp.IconChar.UserGear;
             this.ibtnUser.IconColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -283,7 +306,7 @@
             this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("JetBrains Mono", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton1.ForeColor = System.Drawing.Color.DarkOrange;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.School;
             this.iconButton1.IconColor = System.Drawing.Color.DarkOrange;
@@ -310,7 +333,7 @@
             this.panel2.Location = new System.Drawing.Point(300, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1182, 80);
+            this.panel2.Size = new System.Drawing.Size(1184, 80);
             this.panel2.TabIndex = 1;
             // 
             // ibtnHome
@@ -318,7 +341,7 @@
             this.ibtnHome.Dock = System.Windows.Forms.DockStyle.Left;
             this.ibtnHome.FlatAppearance.BorderSize = 0;
             this.ibtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ibtnHome.Font = new System.Drawing.Font("JetBrains Mono", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ibtnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ibtnHome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ibtnHome.IconChar = FontAwesome.Sharp.IconChar.CircleXmark;
             this.ibtnHome.IconColor = System.Drawing.Color.White;
@@ -342,14 +365,14 @@
             this.txtUsername.Dock = System.Windows.Forms.DockStyle.Right;
             this.txtUsername.FlatAppearance.BorderSize = 0;
             this.txtUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtUsername.Font = new System.Drawing.Font("JetBrains Mono", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtUsername.IconChar = FontAwesome.Sharp.IconChar.User;
             this.txtUsername.IconColor = System.Drawing.Color.White;
             this.txtUsername.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.txtUsername.IconSize = 40;
             this.txtUsername.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtUsername.Location = new System.Drawing.Point(744, 0);
+            this.txtUsername.Location = new System.Drawing.Point(746, 0);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(0);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(233, 80);
@@ -364,14 +387,14 @@
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("JetBrains Mono", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogout.IconChar = FontAwesome.Sharp.IconChar.LevelUp;
             this.btnLogout.IconColor = System.Drawing.Color.White;
             this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLogout.IconSize = 40;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(977, 0);
+            this.btnLogout.Location = new System.Drawing.Point(979, 0);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(205, 80);
@@ -384,30 +407,185 @@
             // 
             // pnDestop
             // 
+            this.pnDestop.Controls.Add(this.panel6);
+            this.pnDestop.Controls.Add(this.panel5);
+            this.pnDestop.Controls.Add(this.panel4);
+            this.pnDestop.Controls.Add(this.panel1);
+            this.pnDestop.Controls.Add(this.label1);
+            this.pnDestop.Controls.Add(this.chartStatistiques);
             this.pnDestop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnDestop.Location = new System.Drawing.Point(300, 80);
             this.pnDestop.Margin = new System.Windows.Forms.Padding(10);
             this.pnDestop.Name = "pnDestop";
-            this.pnDestop.Size = new System.Drawing.Size(1182, 873);
+            this.pnDestop.Size = new System.Drawing.Size(1184, 801);
             this.pnDestop.TabIndex = 2;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Indigo;
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.lblProfesseurs);
+            this.panel6.Location = new System.Drawing.Point(889, 126);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(270, 99);
+            this.panel6.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(61, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(172, 20);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Nombre Professeurs";
+            // 
+            // lblProfesseurs
+            // 
+            this.lblProfesseurs.AutoSize = true;
+            this.lblProfesseurs.Location = new System.Drawing.Point(108, 61);
+            this.lblProfesseurs.Name = "lblProfesseurs";
+            this.lblProfesseurs.Size = new System.Drawing.Size(57, 20);
+            this.lblProfesseurs.TabIndex = 3;
+            this.lblProfesseurs.Text = "label3";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.LightCoral;
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.lblClasses);
+            this.panel5.Location = new System.Drawing.Point(601, 126);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(270, 99);
+            this.panel5.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(71, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(139, 20);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Nombre Classes";
+            // 
+            // lblClasses
+            // 
+            this.lblClasses.AutoSize = true;
+            this.lblClasses.Location = new System.Drawing.Point(111, 61);
+            this.lblClasses.Name = "lblClasses";
+            this.lblClasses.Size = new System.Drawing.Size(57, 20);
+            this.lblClasses.TabIndex = 2;
+            this.lblClasses.Text = "label2";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.LightGreen;
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.lblCours);
+            this.panel4.Location = new System.Drawing.Point(312, 126);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(270, 99);
+            this.panel4.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(69, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(123, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Nombre Cours";
+            // 
+            // lblCours
+            // 
+            this.lblCours.AutoSize = true;
+            this.lblCours.Location = new System.Drawing.Point(105, 61);
+            this.lblCours.Name = "lblCours";
+            this.lblCours.Size = new System.Drawing.Size(57, 20);
+            this.lblCours.TabIndex = 4;
+            this.lblCours.Text = "label4";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblEtudiants);
+            this.panel1.Location = new System.Drawing.Point(26, 126);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(270, 99);
+            this.panel1.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(47, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(153, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nombre Etudiants";
+            // 
+            // lblEtudiants
+            // 
+            this.lblEtudiants.AutoSize = true;
+            this.lblEtudiants.Location = new System.Drawing.Point(103, 61);
+            this.lblEtudiants.Name = "lblEtudiants";
+            this.lblEtudiants.Size = new System.Drawing.Size(57, 20);
+            this.lblEtudiants.TabIndex = 1;
+            this.lblEtudiants.Text = "label1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(37, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(241, 31);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Tableau de board";
+            // 
+            // chartStatistiques
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chartStatistiques.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartStatistiques.Legends.Add(legend2);
+            this.chartStatistiques.Location = new System.Drawing.Point(112, 320);
+            this.chartStatistiques.Name = "chartStatistiques";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartStatistiques.Series.Add(series2);
+            this.chartStatistiques.Size = new System.Drawing.Size(573, 402);
+            this.chartStatistiques.TabIndex = 0;
+            this.chartStatistiques.Text = "chart1";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(1482, 953);
+            this.ClientSize = new System.Drawing.Size(1484, 881);
             this.Controls.Add(this.pnDestop);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelMenu);
-            this.Font = new System.Drawing.Font("JetBrains Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MinimumSize = new System.Drawing.Size(1500, 1000);
+            this.MinimumSize = new System.Drawing.Size(1500, 850);
             this.Name = "Form1";
             this.Text = "Système de Gestion des Étudiants";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.pnDestop.ResumeLayout(false);
+            this.pnDestop.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartStatistiques)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -430,6 +608,20 @@
         private FontAwesome.Sharp.IconButton iconButton6;
         private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton iconButton4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartStatistiques;
+        private System.Windows.Forms.Label lblCours;
+        private System.Windows.Forms.Label lblProfesseurs;
+        private System.Windows.Forms.Label lblClasses;
+        private System.Windows.Forms.Label lblEtudiants;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

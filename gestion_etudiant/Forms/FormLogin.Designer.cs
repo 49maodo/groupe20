@@ -86,9 +86,9 @@
             this.label5.Location = new System.Drawing.Point(280, 269);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 20);
+            this.label5.Size = new System.Drawing.Size(77, 20);
             this.label5.TabIndex = 3;
-            this.label5.Text = "label5";
+            this.label5.Text = "Etudiant";
             // 
             // label4
             // 
@@ -97,9 +97,9 @@
             this.label4.Location = new System.Drawing.Point(163, 214);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
+            this.label4.Size = new System.Drawing.Size(72, 20);
             this.label4.TabIndex = 2;
-            this.label4.Text = "label4";
+            this.label4.Text = "Gestion";
             // 
             // label3
             // 
@@ -108,23 +108,24 @@
             this.label3.Location = new System.Drawing.Point(65, 164);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 20);
+            this.label3.Size = new System.Drawing.Size(78, 20);
             this.label3.TabIndex = 1;
-            this.label3.Text = "label3";
+            this.label3.Text = "Systeme";
             // 
             // iconButton1
             // 
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Neuter;
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(62, 75);
+            this.iconButton1.Location = new System.Drawing.Point(88, 43);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(196, 58);
+            this.iconButton1.Size = new System.Drawing.Size(224, 70);
             this.iconButton1.TabIndex = 0;
             this.iconButton1.Text = "Sen School";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
